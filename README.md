@@ -86,33 +86,46 @@ The core of CereLoX is its **on-device security model**. Unlike other services t
 └── README.md
 ```
 
-## How It Works
+## 🚀 How it works
 
-Using CereLoX is as easy as 1-2-3. Here's how you can secure and restore your files in a few simple steps.
+Follow these steps to set up the backend server and frontend dashboard from source.
 
-### 1. Launch the Tool 🚀
+### 1. Installation
+Clone the repository and install the necessary dependencies for both layers.
 
-1.  **Download and Run** the `CereLoX.exe` file from our website.
-2.  **That's it!** The tool will automatically open your default web browser to the CereLoX dashboard at `http://localhost:8888`.
+```bash
+# Clone the repository
+git clone [https://github.com/ismailali025/CereLox.git](https://github.com/ismailali025/CereLox.git)
+cd CereLox/my-cyber-dashboard
 
-### 2. Analyze Your Dashboard 📊
+# Install Frontend dependencies
+npm install
 
-1.  **View Your Data:** Instantly see charts and key metrics (like Failed Logins, System Errors) from the last 24 hours.
-2.  **Toggle Live Mode:** Click the "Live Mode" switch to have the dashboard auto-refresh every 10 seconds with new log data.
+# Install Backend dependencies
+pip install flask flask-cors google-generativeai pywin32
+```
 
-### 3. Chat with the AI 🤖
+### 2. Configuration 🔑
+Create a `.env` file in the root directory and add your Google Gemini API key to enable the AI Chatbot features:
+```text
+GEMINI_API_KEY=your_actual_api_key_here
+```
 
-1.  **Click the Chat Icon** to open the floating AI assistant.
-2.  **Ask About Your Data:** "How many failed logins did I have today?"
-3.  **Ask General Questions:** "What is Event ID 4625?"
+### 3. Running the Application ⚡
+You must run the backend and frontend simultaneously in two separate terminals.
 
-### 4. Generate Reports 📄
+**Terminal 1 (Backend):**
+```bash
+python server.py
+```
+*Initializes the Flask server on `http://localhost:5000` to parse Windows Event Logs.*
 
-1.  **Navigate to the Reports Tab** in the dashboard.
-2.  **Select Your Format:** Click "Download PDF," "Download CSV," or "Download JSON."
-3.  **Save Your File:** A professional report will be instantly generated and saved to your computer.
+**Terminal 2 (Frontend):**
+```bash
+npm run dev
+```
+*Starts the Vite development server. Open the local URL (typically `http://localhost:5173`) in your browser.*
 
----
 
 ## Author
 
