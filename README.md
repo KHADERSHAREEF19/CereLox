@@ -49,6 +49,35 @@ The core of CereLoX is its **on-device security model**. Unlike other services t
 
 ---
 
+```.
+├── LICENSE
+├── my-cyber-dashboard
+│   ├── cerelox_logs.db
+│   ├── CyberChatbot.jsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── server-main.py
+│   ├── server.py
+│   ├── src
+│   │   ├── App.css
+│   │   ├── Appinitial.jsx
+│   │   ├── App.jsx
+│   │   ├── App- see Later.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── tailwind.config.js
+│   └── vite.config.js
+└── README.md
+```
+
 ## How It Works
 
 Using CereLoX is as easy as 1-2-3. Here's how you can secure and restore your files in a few simple steps.
